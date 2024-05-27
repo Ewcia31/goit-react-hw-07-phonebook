@@ -1,16 +1,16 @@
+import { Layout } from './Layout/Layout';
+import { AppBar } from './AppBar/AppBar';
+import { ContactForm } from './ContactForm/ContactForm';
+import { ContactList } from './ContactList/ContactList';
+import { SearchBar } from './SearchBar/SearchBar';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <AppBar />
+      <SearchBar />
+      <ContactForm />
+      <ContactList />
+    </Layout>
   );
 };
