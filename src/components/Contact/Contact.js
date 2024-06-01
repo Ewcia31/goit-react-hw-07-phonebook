@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { MdClose } from 'react-icons/md';
-import { deleteContact } from '../../redux/actions';
+import { deleteContact } from '../../redux/operations';
 import css from './Contact.module.css';
 
 export const Contact = ({ contact }) => {
@@ -23,7 +23,7 @@ export const Contact = ({ contact }) => {
 
 Contact.propTypes = {
   contact: PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
   }).isRequired,
